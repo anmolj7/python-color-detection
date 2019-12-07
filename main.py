@@ -39,7 +39,7 @@ def main():
 
             if color_name == "red":
                 lower_bound = np.uint8([0, 50, 50])
-                upper_bound = np.uint8([10, 255, 255])
+                upper_bound = np.uint8([10, 255, 255]) # can't figure out why red's code doesn't work when I use h-10, 100, 100 and h+10, 255, 255 as the limits.
 
             hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
             mask = cv2.inRange(hsv, lower_bound, upper_bound)
